@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>WikiGroup - Inicio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" th:href="@{css/styles.css}">
 </head>
 <body>
   <div id="container">
@@ -11,21 +11,24 @@
       <h1>WikiGroup</h1>
       <div id="nav">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="index.html" th:href="@{index.html}">Inicio</a></li>
+          <li><a href="equipo.html" th:href="@{equipo.html}">Equipo</a></li>
+          <li><a href="proyectos.html" th:href="@{proyectos.html}">Proyectos</a></li>
+          <li><a href="contactenos.html" th:href="@{contactenos.html}">Contáctenos</a></li>
         </ul>
       </div>
     </div>
 
     <div id="main">
-      <h2>Bienvenido a la Wiki del Proyecto</h2>
+      <h2 th:text="${#strings.isEmpty(welcomeMessage) ? 'Bienvenido a la Wiki del Proyecto' : welcomeMessage}">
+        Bienvenido a la Wiki del Proyecto
+      </h2>
     </div>
 
     <div id="footer">
-      <p>&copy; Proyecto Wiki © 2025</p>
+      <p>&copy; Proyecto Wiki © <span th:text="${#dates.year(#dates.createNow())}">2025</span></p>
     </div>
   </div>
+  <script src="js/scripts.js" th:src="@{js/scripts.js}"></script>
 </body>
 </html>
-

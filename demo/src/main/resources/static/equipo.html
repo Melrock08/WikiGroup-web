@@ -1,77 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Equipo de Proyecto</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <title>WikiGroup - Equipo</title>
+  <link rel="stylesheet" href="css/styles.css" th:href="@{css/styles.css}">
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1>Equipo de Desarrollo</h1>
+      <h1>WikiGroup</h1>
       <div id="nav">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="equipo.html">Equipo</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="index.html" th:href="@{index.html}">Inicio</a></li>
+          <li><a href="equipo.html" th:href="@{equipo.html}" class="active">Equipo</a></li>
+          <li><a href="proyectos.html" th:href="@{proyectos.html}">Proyectos</a></li>
+          <li><a href="contactenos.html" th:href="@{contactenos.html}">Contáctenos</a></li>
         </ul>
       </div>
     </div>
 
     <div id="main">
       <h2>Integrantes</h2>
-
-    <div class="team-container">
-      <div class="card" style="margin-bottom: 30px;">
-        <h3>Juan Santiago Saavedra Holguín</h3>
-        <p><strong>Rol:</strong> Líder de planeación</p>
-        <p><strong>Teléfono:</strong> <span class="dato">3212920993</span></p>
-        <p><strong>Correo:</strong> <a href="saavedrah.js@javeriana.edu.co">saavedrah.js@javeriana.edu.co</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Melrock08" target="_blank">Melrock08</a></p>
-        <p><strong>Descripción:</strong> </p>
+      <div class="team-container">
+        <!-- Miembro 1 -->
+        <div class="card">
+          <h3>Juan Santiago Saavedra Holguín</h3>
+          <p><strong>Rol:</strong> Líder de planeación</p>
+          <p><strong>Teléfono:</strong> <span class="dato">3212920993</span></p>
+          <p><strong>Correo:</strong> <a href="mailto:saavedrah.js@javeriana.edu.co">saavedrah.js@javeriana.edu.co</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Melrock08" target="_blank">Melrock08</a></p>
+        </div>
+        <!-- Miembro 2 -->
+        <div class="card">
+          <h3>Arantxa Espejo</h3>
+          <p><strong>Rol:</strong> Frontend developer</p>
+          <p><strong>Correo:</strong> <a href="mailto:arantxa-espejo@javeriana.edu.co">arantxa-espejo@javeriana.edu.co</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/AranEspejo" target="_blank">AranEspejo</a></p>
+        </div>
+        <!-- Miembro 3 -->
+        <div class="card">
+          <h3>Ana Sofia Arboleda</h3>
+          <p><strong>Rol:</strong> Backend developer</p>
+          <p><strong>Correo:</strong> <a href="mailto:an.arboleda@javeriana.edu.co">an.arboleda@javeriana.edu.co</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/anarboleda" target="_blank">anarboleda</a></p>
+        </div>
+        <!-- Miembro 4 -->
+        <div class="card">
+          <h3>Cesar Canro</h3>
+          <p><strong>Rol:</strong> Database specialist</p>
+          <p><strong>Correo:</strong> <a href="mailto:cesarcanro@javeriana.edu.co">cesarcanro@javeriana.edu.co</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Cesarcanro1" target="_blank">Cesarcanro1</a></p>
+        </div>
+        <!-- Miembro 5 -->
+        <div class="card">
+          <h3>Juan Sebastian Rodriguez Pabon</h3>
+          <p><strong>Rol:</strong> Líder de pruebas</p>
+          <p><strong>Correo:</strong> <a href="mailto:juans_rodriguezp@javeriana.edu.co">juans_rodriguezp@javeriana.edu.co</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/IngenieroJuanse" target="_blank">IngenieroJuanse</a></p>
+        </div>
       </div>
-
-      <div class="card" style="margin-bottom: 30px;">
-        <h3>Arantxa Espejo</h3>
-        <p><strong>Rol:</strong> Frontend developer </p>
-        <p><strong>Teléfono:</strong> <span class="dato">número</span></p>
-        <p><strong>Correo:</strong> <a href="arantxa-espejo@javeriana.edu.co">arantxa-espejo@javeriana.edu.co</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/AranEspejo" target="_blank">AranEspejo</a></p>
-        <p><strong>Descripción:</strong> </p>
-      </div>
-
-      <div class="card" style="margin-bottom: 30px;">
-        <h3>Ana Sofia Arboleda</h3>
-        <p><strong>Rol:</strong> </p>
-        <p><strong>Teléfono:</strong> <span class="dato">número</span></p>
-        <p><strong>Correo:</strong> <a href="an.arboleda@javeriana.edu.co">an.arboleda@javeriana.edu.co</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/anarboleda" target="_blank">anarboleda</a></p>
-        <p><strong>Descripción:</strong> </p>
-      </div>
-
-      <div class="card" style="margin-bottom: 30px;">
-        <h3>Cesar Canro</h3>
-        <p><strong>Rol:</strong> </p>
-        <p><strong>Teléfono:</strong> <span class="dato">número</span></p>
-        <p><strong>Correo:</strong> <a href="cesarcanro@javeriana.edu.co">cesarcanro@javeriana.edu.co</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Cesarcanro1" target="_blank">Cesarcanro1</a></p>
-        <p><strong>Descripción:</strong> </p>
-      </div>
-
-      <div class="card" style="margin-bottom: 30px;">
-        <h3>Juan Sebastian Rodriguez Pabon</h3>
-        <p><strong>Rol: Lider de pruebas </strong> </p>
-        <p><strong>Teléfono:</strong> <span class="dato">número</span></p>
-        <p><strong>Correo:</strong> <a href="mjuans_rodriguezp@javeriana.edu.co">juans_rodriguezp@javeriana.edu.co</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/IngenieroJuanse" target="_blank">IngenieroJuanse</a></p>
-        <p><strong>Descripción:</strong> </p>   
-      </div>
-    </div>
     </div>
 
     <div id="footer">
-      <p>Proyecto Wiki © 2025</p>
+      <p>&copy; Proyecto Wiki © <span th:text="${#dates.year(#dates.createNow())}">2025</span></p>
     </div>
   </div>
+
+  <script src="js/scripts.js" th:src="@{js/scripts.js}"></script>
 </body>
 </html>
