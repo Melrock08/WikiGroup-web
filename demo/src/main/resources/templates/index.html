@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title},~{::content})">
+
+<head>
+  <title>WikiGroup - Inicio</title>
+</head>
+
+<body>
+  <section id="main">
+    <h2 th:text="${#strings.isEmpty(welcomeMessage) ? 'Bienvenido a la Wiki del Proyecto' : welcomeMessage}">
+      Bienvenido a la Wiki del Proyecto
+    </h2>
+  </section>
+</body>
+</html>
