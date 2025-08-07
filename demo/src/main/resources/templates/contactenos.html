@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title},~{::content})">
+
+<head>
+  <title>WikiGroup - Contáctenos</title>
+</head>
+
+<body>
+  <section id="main">
+    <h2>Formulario de contacto</h2>
+
+    <!-- El objeto "contacto" debe estar en el modelo desde el controlador -->
+    <form id="contactForm" th:action="@{/contactenos}" th:object="${contacto}" method="post">
+      <div class="form-group">
+        <label for="nombres">Nombres*:</label>
+        <input type="text" id="nombres" th:field="*{nombres}" maxlength="100" required>
+        <span th:if="${#fields.hasErrors('nombres')}" th:errors="*{nombres}"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="apellidos">Apellidos*:</label>
+        <input type="text" id="apellidos" th:field="*{apellidos}" maxlength="100" required>
+        <span th:if="${#fields.hasErrors('apellidos')}" th:errors="*{apellidos}"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo electrónico*:</label>
+        <input type="email" id="correo" th:field="*{correo}" maxlength="100" required>
+        <span th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="semestre">Semestre (0-16):</label>
+        <input type="number" id="semestre" th:field="*{semestre}" min="0" max="16">
+        <span th:if="${#fields.hasErrors('semestre')}" th:errors="*{semestre}"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción*:</label>
+        <textarea id="descripcion" th:field="*{descripcion}" maxlength="500" required></textarea>
+        <div id="char-counter">0/500 caracteres</div>
+        <span th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></span>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</body>
+</html>

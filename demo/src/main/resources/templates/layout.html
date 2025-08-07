@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:insert="~{::title}">WikiGroup</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+  <div th:replace="fragments/menu :: menu"></div>
+
+  <main th:insert="~{::content}"></main>
+
+  <footer>
+    <p>© 2025 WikiGroup</p>
+  </footer>
+
+  <script th:src="@{/js/validaciones.js}"></script>
+</body>
+</html>
