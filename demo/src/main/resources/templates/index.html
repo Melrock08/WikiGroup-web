@@ -1,16 +1,66 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:replace="layout :: layout(~{::title},~{::content})">
-
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+  <meta charset="UTF-8">
   <title>WikiGroup - Inicio</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
-
 <body>
-  <section id="main">
-    <h2 th:text="${#strings.isEmpty(welcomeMessage) ? 'Bienvenido a la Wiki del Proyecto' : welcomeMessage}">
-      Bienvenido a la Wiki del Proyecto
-    </h2>
-  </section>
+
+  <div th:replace="~{fragments/menu :: menu}"></div>
+
+  <main id="main">
+ 
+    <section>
+      <h2 class="page-title">Bienvenido a WikiGroup</h2>
+      <p>
+        Somos un equipo de desarrollo apasionado por crear soluciones tecnológicas innovadoras.
+        Esta wiki documenta nuestro proyecto, los avances, las tecnologías usadas y las personas que lo hacen posible.
+      </p>
+    </section>
+
+    <section class="mt-4">
+      <h3>Objetivos del Proyecto</h3>
+      <ul>
+        <li>Desarrollar una aplicación web moderna y funcional para la gestión de información.</li>
+        <li>Implementar una arquitectura sólida y escalable usando Java, Spring Boot y Thymeleaf.</li>
+        <li>Garantizar calidad de software mediante pruebas unitarias y de integración.</li>
+      </ul>
+    </section>
+
+    <section class="mt-4">
+      <h3>Tecnologías Utilizadas</h3>
+      <div class="team-container">
+        <div class="card">
+          <h4>Backend</h4>
+          <p>Spring Boot, Java 21, Hibernate, MySQL</p>
+        </div>
+        <div class="card">
+          <h4>Frontend</h4>
+          <p>HTML5, CSS3, JavaScript, Thymeleaf</p>
+        </div>
+        <div class="card">
+          <h4>Herramientas</h4>
+          <p>GitHub, Maven, VS Code</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="mt-4">
+      <h3>Resumen del Proyecto</h3>
+      <p>
+        El objetivo de WikiGroup es centralizar toda la documentación técnica y funcional del desarrollo de nuestro software.
+        Aquí encontrarás información del equipo, arquitectura del sistema, endpoints, casos de prueba y mucho más.
+      </p>
+    </section>
+  </main>
+
+
+  <footer id="footer">
+    <p>© 2025 WikiGroup. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
+ 

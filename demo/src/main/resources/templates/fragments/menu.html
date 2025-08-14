@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<div th:fragment="menu">
-  <ul>
-    <li><a th:href="@{/}">Inicio</a></li>
-    <li><a th:href="@{/equipo}">Equipo</a></li>
-    <li><a th:href="@{/proyectos}">Proyectos</a></li>
-    <li><a th:href="@{/contactenos}">Contáctenos</a></li>
-  </ul>
-</div>
+<body>
+    <nav id="nav" th:fragment="menu">
+        <ul>
+            <li><a th:href="@{/}">Inicio</a></li>
+            <li><a th:href="@{/equipo}">Equipo</a></li>
+            <li><a th:href="@{/proyectos}">Proyecto</a></li>
+            <li><a th:href="@{/contactenos}">Contacto</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

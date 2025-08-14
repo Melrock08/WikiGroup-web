@@ -1,20 +1,105 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:replace="layout :: layout(~{::title},~{::content})">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>WikiGroup - Proyectos</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 
 <body>
-  <section id="main">
-    <h2>Proyectos del grupo</h2>
+  <div th:replace="~{fragments/menu :: menu}"></div>
 
-    <!-- Aquí puedes listar tus proyectos, por ejemplo en tarjetas o tablas -->
-    <div class="project-container">
-      <p>Este espacio está reservado para la descripción de los proyectos realizados por el grupo.</p>
-      <p>Puedes mostrar tarjetas, tablas u otro diseño aquí.</p>
-    </div>
-  </section>
+  <main id="main">
+    <header class="text-center mb-4">
+      <h2>Proyectos del Grupo</h2>
+      <p class="highlight">Documentación técnica y funcional del sistema WikiGroup</p>
+    </header>
+
+    <section class="card mb-4">
+      <h3>Descripción del proyecto</h3>
+      <p>
+        El proyecto <strong>WikiGroup</strong> es una plataforma web para centralizar la documentación técnica y administrativa de proyectos de software. 
+        Permite organizar arquitectura, requerimientos, diagramas, endpoints y pruebas en un único sitio.
+      </p>
+      <p>
+        Está desarrollado con <em>Spring Boot</em>, <em>Thymeleaf</em> y <em>MySQL</em>, siguiendo principios de arquitectura modular y escalabilidad.
+      </p>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Requerimientos funcionales</h3>
+      <ul>
+        <li>Registrar y mostrar información de los miembros del equipo.</li>
+        <li>Documentar arquitectura del sistema con diagramas actualizados.</li>
+        <li>Registrar casos de prueba para frontend y backend.</li>
+        <li>Formulario de contacto con validaciones estrictas.</li>
+        <li>Visualizar versiones y cambios de despliegue.</li>
+      </ul>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Requerimientos no funcionales</h3>
+      <ul>
+        <li>Compatibilidad con Chrome, Firefox, Safari y Edge.</li>
+        <li>Interfaz moderna, responsiva y accesible.</li>
+        <li>Tiempo de carga inicial menor a 3 segundos.</li>
+        <li>Base de datos en máquina virtual segura.</li>
+        <li>Disponibilidad mínima del 99%.</li>
+      </ul>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Diagramas (C4, contexto, contenedor, componentes)</h3>
+      <p>Espacio reservado para diagramas de arquitectura:</p>
+      <div class="diagram-container">
+        <img src="" alt="Diagrama de contexto" style="max-width:100%; margin-bottom:1rem;">
+        <img src="" alt="Diagrama de contenedor" style="max-width:100%; margin-bottom:1rem;">
+        <img src="" alt="Diagrama de componentes" style="max-width:100%;">
+      </div>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Modelos (Entidad/Relación, diccionario de datos, despliegue)</h3>
+      <p>Espacio para representar la base de datos y su despliegue:</p>
+      <div class="diagram-container">
+        <img src="" alt="Modelo Entidad/Relación" style="max-width:100%; margin-bottom:1rem;">
+        <img src="" alt="Modelo de despliegue" style="max-width:100%;">
+      </div>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Descripción de endpoints</h3>
+      <ul>
+        <li><code>GET /equipo</code> - Lista los miembros del equipo.</li>
+        <li><code>GET /proyecto</code> - Muestra la documentación del proyecto.</li>
+        <li><code>POST /contacto</code> - Guarda un mensaje del formulario.</li>
+      </ul>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Casos de prueba frontend</h3>
+      <p>Pruebas de usabilidad, validación de formularios y visualización en diferentes dispositivos y navegadores.</p>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Casos de prueba backend</h3>
+      <p>Pruebas unitarias con JUnit y Mockito, además de pruebas de integración API-Base de datos.</p>
+    </section>
+
+    <section class="card mb-4">
+      <h3>Despliegue (versiones)</h3>
+      <ul>
+        <li><strong>v1.0</strong> - Página de equipo y descripción inicial.</li>
+        <li><strong>v1.1</strong> - Formulario de contacto con validaciones.</li>
+        <li><strong>v1.2</strong> - Integración con MySQL.</li>
+        <li><strong>v1.3</strong> - Diagramas y documentación técnica.</li>
+      </ul>
+    </section>
+
+  </main>
+  
+  <footer id="footer">
+    <p>© 2025 WikiGroup. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
